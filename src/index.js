@@ -1,11 +1,15 @@
-import {env} from "./config/env.config.js";
-import connectDB from "./config/db.js";
-
-
+import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import nodemon from "nodemon";
 import cors from "cors";
+
+dotenv.config();
+
+import connectDB from "./config/db.js";
+
+
+
 
 
 import createWorkshop from "./repository/workShop.repository/workshoopCreate.repository.js";
@@ -39,6 +43,8 @@ const app = express();
 const DOOR = 3000;
 
 app.use(express.json());
+
+connectDB();
 
 app.use(cors({
      origin: "https://preview--gear-glow-system.lovable.app",

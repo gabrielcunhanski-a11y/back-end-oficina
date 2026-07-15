@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const VeiculoSchema = new mongoose.Schema({
     plate: {
-        type: Number,
+        type: String,
         required: true
     },
     model: {
