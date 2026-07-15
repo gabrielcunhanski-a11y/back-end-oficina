@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
 import nodemon from "nodemon";
-import cors from "cors";
+// import cors from "cors";
 
 dotenv.config();
 
@@ -46,10 +46,10 @@ app.use(express.json());
 
 connectDB();
 
-app.use(cors({
-     origin: "https://preview--gear-glow-system.lovable.app",
-     credentials: true
-}));
+// app.use(cors({
+//      origin: "https://preview--gear-glow-system.lovable.app",
+//      credentials: true
+// }));
 
 
 
