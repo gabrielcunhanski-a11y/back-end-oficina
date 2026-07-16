@@ -190,6 +190,6 @@ app.get("/maintenance", async (req, res) => {
           res.json({error: error.message});
      }
 })
-app.listen(DOOR, '0.0.0.0'() =>
+app.listen(DOOR, '0.0.0.0', () =>
      console.log(`The server is running in the door: ${DOOR}`)
 );
