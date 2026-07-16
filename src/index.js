@@ -40,7 +40,7 @@ import MWorkshop from "./db/Workshop.js";
 
 
 const app = express();
-const DOOR = 3000;
+const DOOR = process.env.DOOR || 3000;
 
 app.use(express.json());
 
@@ -190,6 +190,6 @@ app.get("/maintenance", async (req, res) => {
           res.json({error: error.message});
      }
 })
-app.listen(DOOR,() =>
+app.listen(DOOR, '0.0.0.0'() =>
      console.log(`The server is running in the door: ${DOOR}`)
 );
