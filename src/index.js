@@ -61,7 +61,7 @@ app.post("/workshop", async (req, res) => {
           const newWork = await createWorkshop(req.body)
           res.json(newWork)
      } catch(error) {
-          res.json({error: error.message}); 
+          res.status(400).json({error: error.message}); 
 
      }
 })
