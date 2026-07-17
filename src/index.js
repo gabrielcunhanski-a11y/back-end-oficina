@@ -94,15 +94,6 @@ app.get("/workshop", async (req, res) => {
      }
 })
 
-app.get("/workshop/:id/veiculos", async (req, res) => {
-     try{
-          const veiculoWork = await veiculoWork(req.body);
-          res.json(veiculoWork);
-
-     } catch(error) {
-          res.json({error: error.message});
-     }
-})
 
 //! Veiculo
 app.post("/veiculo", async (req,res) => {
@@ -190,6 +181,8 @@ app.get("/maintenance", async (req, res) => {
           res.json({error: error.message});
      }
 })
+
+
 app.listen(DOOR, '0.0.0.0', () =>
      console.log(`The server is running in the door: ${DOOR}`)
 );
