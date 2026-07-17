@@ -5,4 +5,4 @@ import MWorkshop from "../../db/Workshop.js";
     return newWork;
 }
 
-export default createWorkshop
+export default createWorkshop;

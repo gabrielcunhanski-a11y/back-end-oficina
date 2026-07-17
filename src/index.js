@@ -59,7 +59,7 @@ app.use(cors({
 app.post("/workshop", async (req, res) => {
      try{
           const newWork = await createWorkshop(req.body)
-          res.json(newWork).status(200);
+          res.json(newWork)
      } catch(error) {
           res.json({error: error.message}); 
 
@@ -69,7 +69,7 @@ app.post("/workshop", async (req, res) => {
 app.put("/workshop/:id", async (req, res) => {
      try{
           const updateWork = await updateWorkshop(req.params.id, req.body, {new: true})
-          res.json(updateWork).status(200);
+          res.json(updateWork)
      } catch(error) {
           res.json({error: error.message});
      }
