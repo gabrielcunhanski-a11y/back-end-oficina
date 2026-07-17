@@ -80,7 +80,7 @@ app.delete("/workshop/:id", async (req, res) => {
           const deleteWork = await deleteWorkshop(req.params.id);
           res.json(deleteWork);
      } catch(error) {
-          res.json({error: error.message});
+          res.status(400).json({error: error.message});
      }
 })
 
