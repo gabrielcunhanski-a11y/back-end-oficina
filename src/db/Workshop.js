@@ -10,7 +10,7 @@ const WorkshopSchema = new mongoose.Schema({
         required: true
     },
     specialties: {
-        type: String,
+        type: [String],
         required: true
     }
         
