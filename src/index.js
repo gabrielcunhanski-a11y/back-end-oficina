@@ -32,11 +32,22 @@ import readMaintenance from "./repository/maintenance.repository/maintenanceRead
 
 
 
+import createUser from "./repository/user.repository/userCreate.repository.js";
+import updateUser from "./repository/user.repository/userUpdate.repository.js";
+import deleteUser from "./repository/user.repository/userDelete.repository.js";
+
+
+import createAdmin from "./repository/admin.repository/adminCreate.repository.js";
+import deleteAdmin from "./repository/admin.repository/adminDelete.reposirory.js";
+import updateAdmin from "./repository/admin.repository/adminUpdate.repository.js";
+
 
 import Workshop from "./db/Workshop.js";
 import Veiculo from "./db/Veiculo.js";
 import Maintenance from "./db/Maintenance.js";
 import MWorkshop from "./db/Workshop.js";
+import MUser from "./db/User.js";
+import MAdmin from "./db/Admin.js";
 
 
 const app = express();
@@ -178,6 +189,20 @@ app.get("/maintenance", async (req, res) => {
           res.json(lerMaintenance);
 
      } catch(error) {
+          res.json({error: error.message});
+     }
+})
+
+
+//! User
+
+app.post("/user", async (req, res) => {
+     try{
+          const postUser = await createUser(req.body);
+          res.json(postUser);
+
+     }
+     catch(error) {
           res.json({error: error.message});
      }
 })
