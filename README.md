@@ -79,8 +79,6 @@ Contribuição
 - Abra issues ou pull requests com mudanças propostas.
 - Verifique padrões de código e escreva testes para novas funcionalidades.
 
-Licença
-- Adicione a licença desejada (ex.: MIT) no repositório.
 
 Contato
 - Para dúvidas sobre o projeto, abra uma issue ou contacte o autor do repositório.
